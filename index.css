@@ -1,0 +1,69 @@
+/* 
+  Note: @tailwind directives are removed because we are using the CDN version 
+  which does not support @tailwind directives in external CSS files without a build step.
+  Tailwind utilities are provided by the script in index.html.
+*/
+
+body {
+  background-color: #ffffff;
+  color: #202124;
+  font-family: 'Noto Sans KR', sans-serif;
+  /* Design System: Dot Matrix Pattern */
+  background-image: radial-gradient(#E1E3E6 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+}
+
+/* Custom Scrollbar - Light Theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #DADCE0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BDC1C6;
+}
+
+/* Utility Classes */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #e5e7eb;
+    border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #d1d5db;
+}
+
+/* Clean Card Styles */
+.clean-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid #E8EAED;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.05), 0 2px 6px 2px rgba(60, 64, 67, 0.05);
+  transition: all 0.2s ease;
+}
+.clean-card:hover {
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.1), 0 4px 8px 3px rgba(60, 64, 67, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Modal Panel */
+.modal-panel {
+  background: #ffffff;
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+}
