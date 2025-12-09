@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { ViewMode } from '../types';
-import { LayoutDashboard, Search, Sparkles, ListTodo, Bot, BookOpen } from './Icons';
+import { LayoutDashboard, Search, Sparkles, ListTodo, Bot, BookOpen, Video } from './Icons';
 
 interface LayoutProps { 
     children: React.ReactNode; 
@@ -53,6 +53,12 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentView, onNavigat
               active={currentView === 'KNOWLEDGE'} 
               onClick={() => onNavigate('KNOWLEDGE')}
           />
+          <NavButton 
+              icon={<Video />} 
+              label="영상 분석" 
+              active={currentView === 'VIDEO'} 
+              onClick={() => onNavigate('VIDEO')}
+          />
           <div className="pt-4 pb-2">
                <div className="h-px bg-gray-200 mx-2"></div>
           </div>
@@ -78,7 +84,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentView, onNavigat
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 ml-20 lg:ml-64 flex flex-col h-screen overflow-hidden relative">
+      <main className="flex-1 ml-20 lg:ml-64 flex flex-col h-screen overflow-y-auto relative">
           {currentView === 'BOARD' && (
               <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-50 rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
           )}

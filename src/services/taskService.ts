@@ -1,5 +1,5 @@
-import { Task, TaskStatus, Priority } from "../types";
-import { INITIAL_TASKS } from "../constants";
+import { Task, TaskStatus, Priority } from "../../types";
+import { INITIAL_TASKS } from "../../constants";
 
 // This service acts as an abstraction layer.
 // Currently it uses in-memory mock data, but can be easily swapped 

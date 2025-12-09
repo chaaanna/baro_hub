@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Sparkles, Send, Mic, ImageIcon, Compass, Lightbulb, Code, ChevronDown, X, Calendar, Trash2 } from './Icons';
-import { getGeminiChatStream } from '../services/geminiService';
+import { getGeminiChatStream } from '../src/services/geminiService';
 import { AVAILABLE_MODELS, GeminiModel } from '../constants';
 import { formatDate } from '../utils/taskHelpers';
 
@@ -158,7 +158,7 @@ export const GeminiPage: React.FC = () => {
             }]);
 
             // Pass the selected model ID and optional image
-            const stream = await getGeminiChatStream(
+            const stream = getGeminiChatStream(
                 history, 
                 text, 
                 selectedModel.id,

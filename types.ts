@@ -15,7 +15,7 @@ export enum Priority {
   LOW = 'LOW'
 }
 
-export type ViewMode = 'BOARD' | 'GEMINI' | 'KNOWLEDGE';
+export type ViewMode = 'BOARD' | 'GEMINI' | 'KNOWLEDGE' | 'VIDEO';
 
 export interface User {
   id: string;

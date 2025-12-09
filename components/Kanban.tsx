@@ -2,7 +2,7 @@
 import React, { useState, useMemo } from 'react';
 import { Task, TaskStatus, Priority } from '../types';
 import { MoreHorizontal, Calendar, Search, Filter, ArrowUpDown, XCircle, User, Sparkles, AlertCircle, Clock, Trash2 } from './Icons';
-import { KANBAN_COLUMNS } from '../constants';
+import { KANBAN_STATUSES } from '../constants';
 import { getSortedAndFilteredTasks, SortOption, formatDate } from '../utils/taskHelpers';
 
 interface KanbanProps {
@@ -149,7 +149,7 @@ export const KanbanBoard: React.FC<KanbanProps> = ({ tasks, onTaskClick, onStatu
 
         {/* --- Kanban Columns (Dynamic Rendering) --- */}
         <div className="flex gap-8 h-full min-w-max pb-4 flex-1">
-        {KANBAN_COLUMNS.map((col) => {
+        {KANBAN_STATUSES.map((col) => {
             const colTasks = processedTasks.filter((t) => t.status === col.id);
             const isDragOver = dragOverColumn === col.id;
 

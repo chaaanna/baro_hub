@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Task, ChatMessage, AIAnalysis } from '../types';
 import { Sparkles, CheckCircle2, BrainCircuit, FileText, ArrowRight, Send } from './Icons';
-import { UI_TEXTS } from '../constants';
+import { UI_DEFAULTS } from '../constants';
 
 // --- View Components ---
 
@@ -30,7 +30,7 @@ export const DraftView: React.FC<{
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl opacity-10 blur-lg transition-opacity group-hover:opacity-20"></div>
       <textarea 
         className="relative w-full p-6 rounded-2xl bg-white border border-gray-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 text-gray-900 placeholder-gray-400 resize-none h-32 transition-all text-base leading-relaxed shadow-sm"
-        placeholder={UI_TEXTS.DRAFT_PLACEHOLDER}
+        placeholder={UI_DEFAULTS.DRAFT_PLACEHOLDER}
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
@@ -160,7 +160,7 @@ export const SubtaskView: React.FC<{
             ))}
             {task.subtasks.length === 0 && (
                 <div className="text-center py-12 border-2 border-dashed border-gray-100 rounded-2xl bg-gray-50/50">
-                    <p className="text-gray-400 text-sm">{UI_TEXTS.EMPTY_SUBTASKS}<br/>AI 생성을 눌러보세요.</p>
+                    <p className="text-gray-400 text-sm">{UI_DEFAULTS.EMPTY_SUBTASKS}<br/>AI 생성을 눌러보세요.</p>
                 </div>
             )}
         </div>
